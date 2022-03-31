@@ -6,6 +6,7 @@
     "jsx": "preserve",
     "moduleResolution": "node",
     "experimentalDecorators": true,
+    "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -29,6 +30,7 @@
     ]
   },
   "include": [
+    "./*.js",
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.vue",

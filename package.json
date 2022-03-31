@@ -5,10 +5,18 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "build:client": "vue-cli-service build --dest dist/client",
+    "build:server": "SSR=1 vue-cli-service build --dest dist/server",
+    "build:ssr": "npm run build:client && npm run build:server"
   },
   "dependencies": {
+    "@types/koa-static": "^4.0.2",
+    "@vue/server-renderer": "^3.2.31",
+    "bluebird": "^3.7.2",
     "core-js": "^3.8.3",
+    "koa": "^2.13.4",
+    "koa-static": "^5.0.0",
     "vue": "^3.2.13",
     "vue-class-component": "^8.0.0-0",
     "vue-router": "^4.0.3",
@@ -29,6 +37,9 @@
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-vue": "^8.0.3",
     "eslint-plugin-vuejs-accessibility": "^1.1.0",
-    "typescript": "~4.5.5"
+    "typescript": "~4.5.5",
+    "webpack": "^5.70.0",
+    "webpack-manifest-plugin": "^5.0.0",
+    "webpack-node-externals": "^3.0.0"
   }
 }
