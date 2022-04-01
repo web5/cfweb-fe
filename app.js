@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-03-31 00:49:36
  * @LastEditors: geekwen
- * @LastEditTime: 2022-04-01 00:42:46
+ * @LastEditTime: 2022-04-02 01:42:26
  * @FilePath: /cfweb-fe/app.js
  * @Description: Description
  */
@@ -25,7 +25,9 @@ server.use(static(path.join(__dirname, './dist/client', 'favicon.ico')));
 
 server.use(async (ctx) => {
   const context = ctx;
-  const { app } = createApp();
+  const { app, router } = createApp();
+  await router.push(ctx.request.url);
+  await router.isReady();
   const appContent = await renderToString(app);
   const resultHtml = await new Promise((resolve, reject) => {
     fs.readFile(path.join(__dirname, './dist/client', 'index.html'), (err, html) => {

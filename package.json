@@ -16,6 +16,7 @@
     "bluebird": "^3.7.2",
     "core-js": "^3.8.3",
     "koa": "^2.13.4",
+    "koa-router": "^10.1.1",
     "koa-static": "^5.0.0",
     "vue": "^3.2.13",
     "vue-class-component": "^8.0.0-0",
