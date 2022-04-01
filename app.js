@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-03-31 00:49:36
  * @LastEditors: geekwen
- * @LastEditTime: 2022-04-02 01:42:26
+ * @LastEditTime: 2022-04-02 01:56:15
  * @FilePath: /cfweb-fe/app.js
  * @Description: Description
  */
@@ -18,10 +18,7 @@ const server = new Koa();
 const appPath = path.join(__dirname, './dist', 'server', manifest['app.js']);
 const createApp = require(appPath).default;
 
-server.use(static(path.join(__dirname, './dist/client', 'img')));
-server.use(static(path.join(__dirname, './dist/client', 'js')));
-server.use(static(path.join(__dirname, './dist/client', 'css')));
-server.use(static(path.join(__dirname, './dist/client', 'favicon.ico')));
+server.use(static(path.join(__dirname, './dist/client')));
 
 server.use(async (ctx) => {
   const context = ctx;
