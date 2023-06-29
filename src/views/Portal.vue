@@ -1,7 +1,13 @@
+<!--
+ * @Date: 2022-03-31 08:26:14
+ * @LastEditors: geekwen
+ * @LastEditTime: 2022-04-02 02:15:44
+ * @FilePath: /cfweb-fe/src/views/Portal.vue
+ * @Description: Description
+-->
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <HelloWorld msg="Welcome to Your One Orange"/>
   </div>
 </template>
 
